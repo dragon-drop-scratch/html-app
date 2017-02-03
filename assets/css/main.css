@@ -61,3 +61,13 @@ a:visited {
   text-decoration: none;
   color: #4286f4;
 }
+
+button {
+  font-family: "Segoe UI", Helvetica, Arial;
+  color: #ffffff;
+  font-size: 20px;
+  background: #4286f4;
+  padding: 10px 10px 10px 10px;
+  border: solid #000888 1px;
+  text-decoration: none;
+}
