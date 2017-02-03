@@ -1,0 +1,36 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Segoe UI', Helvetica, Arial;
+}
+
+.main-content {
+  padding: 15px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #4286f4;
+    border-style: none none grooved;
+    border-width: 0px 0px 2px;
+    border-color: #888;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #448cff;
+}
