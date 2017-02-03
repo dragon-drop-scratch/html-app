@@ -14,8 +14,8 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #4286f4;
-    border-style: none none grooved;
-    border-width: 0px 0px 2px;
+    border-style: groove;
+    border-width: 0px 0px 1px;
     border-color: #888;
 }
 
