@@ -34,3 +34,15 @@ li a {
 li a:hover:not(.active) {
     background-color: #448cff;
 }
+
+strong {
+  font-weight: bolder;
+}
+
+h1 {
+  font-weight: normal;
+}
+
+h2 {
+  font-weight: normal;
+}
