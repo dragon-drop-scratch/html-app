@@ -6,6 +6,7 @@
   background-color: black;
   padding: 10px 10px 10px 10px;
   text-decoration: none;
+  margin: 3px;
 }
 
 .google-button {
@@ -16,6 +17,7 @@
   background-color: #ea4335;
   padding: 10px 10px 10px 10px;
   text-decoration: none;
+  margin: 3px;
 }
 
 .login-button {
@@ -26,4 +28,5 @@
   background-color: #4286f4;
   padding: 10px 10px 10px 10px;
   text-decoration: none;
+  margin: 3px;
 }
