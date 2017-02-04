@@ -71,3 +71,8 @@ button {
   border: solid #000888 1px;
   text-decoration: none;
 }
+
+hr {
+  color: gray;
+  height: 1px;
+}
