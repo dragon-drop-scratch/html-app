@@ -8,7 +8,7 @@ body {
   padding: 15px;
 }
 
-ul {
+.nav {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -19,11 +19,11 @@ ul {
     border-color: #888;
 }
 
-li {
+.nav li {
     float: left;
 }
 
-li a {
+.nav li a {
     display: block;
     color: white !important;
     text-align: center;
@@ -31,7 +31,7 @@ li a {
     text-decoration: none !important;
 }
 
-li a:hover:not(.active) {
+.nav li a:hover:not(.active) {
     background-color: #448cff !important;
 }
 
