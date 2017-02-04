@@ -1,0 +1,29 @@
+.github-button {
+  font-family: "Segoe UI", Helvetica, Arial;
+  text-transform: uppercase;
+  color: white;
+  font-size: 20px;
+  background-color: black;
+  padding: 10px 10px 10px 10px;
+  text-decoration: none;
+}
+
+.google-button {
+  font-family: "Segoe UI", Helvetica, Arial;
+  text-transform: uppercase;
+  color: white;
+  font-size: 20px;
+  background-color: #ea4335;
+  padding: 10px 10px 10px 10px;
+  text-decoration: none;
+}
+
+.login-button {
+  font-family: "Segoe UI", Helvetica, Arial;
+  text-transform: uppercase;
+  color: white;
+  font-size: 20px;
+  background-color: #4286f4;
+  padding: 10px 10px 10px 10px;
+  text-decoration: none;
+}
