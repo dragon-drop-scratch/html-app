@@ -59,6 +59,7 @@ a {
 a:hover{
   text-decoration: underline;
   color: #4286f4;
+  cursor: pointer;
 }
 
 a:visited {
@@ -74,6 +75,15 @@ button {
   padding: 10px 10px 10px 10px;
   border: solid #000888 1px;
   text-decoration: none;
+  cursor: pointer;
+}
+
+button:active {
+  cursor: wait;
+}
+
+a:active {
+  cursor: wait;
 }
 
 hr {
