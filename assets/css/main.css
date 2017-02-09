@@ -87,5 +87,10 @@ hr {
   background-color: #4286f4;
   width: 100%;
   margin: 20px 0px;
-  padding: 15px;
+  padding: 30px 70px;
+}
+
+.content {
+  margin: 20px 0px;
+  padding: 30px 70px;
 }
