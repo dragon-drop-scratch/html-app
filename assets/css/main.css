@@ -85,12 +85,11 @@ hr {
 .blue-bg {
   color: white;
   background-color: #4286f4;
-  width: 100%;
   margin: 20px 0px;
-  padding: 30px 70px;
+  padding: 30px 20%;
 }
 
 .content {
   margin: 20px 0px;
-  padding: 30px 70px;
+  padding: 30px 20%;
 }
