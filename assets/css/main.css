@@ -112,3 +112,33 @@ hr {
   padding: 10px;
   margin: 10px 0px;
 }
+
+.box-area {
+	margin: 10px 10%;
+	align-items: center;
+    	justify-content: center;
+   	align-items: center;
+	display: flex;
+    	-webkit-box-direction: normal;
+    	-webkit-box-pack: center;
+   	flex-wrap: wrap;
+    	flex-direction: row;
+    	-webkit-box-align: stretch;
+}
+
+.box {
+	/*height: 205px;
+    	width: 226px;*/
+    	border: 1px solid #e9e7e7;
+    	text-align: center;
+    	border-radius: 4px;
+    	padding-bottom: 22px;
+    	margin: 22px 16px 0px;
+    	font-size: 16px;
+    	display: flex;
+    	flex-direction: column;
+    	-webkit-box-orient: horizontal;
+    	-webkit-box-direction: normal;
+   	-webkit-box-align: center;
+    	align-items: center;
+}
