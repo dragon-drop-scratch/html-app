@@ -56,7 +56,7 @@ a {
   color: #4286f4;
 }
 
-a:hover{
+a:hover {
   text-decoration: underline;
   color: #4286f4;
   cursor: pointer;
@@ -76,14 +76,6 @@ button {
   border: solid #000888 1px;
   text-decoration: none;
   cursor: pointer;
-}
-
-button:active {
-  cursor: wait;
-}
-
-a:active {
-  cursor: wait;
 }
 
 hr {
