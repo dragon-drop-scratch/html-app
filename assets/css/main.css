@@ -2,10 +2,16 @@ body {
   margin: 0px;
   padding: 0px;
   font-family: 'Segoe UI', Helvetica, Arial;
+  color: #4f545c;
 }
 
 .main-content {
   padding: 20px;
+}
+
+.title {
+  text-transform: uppercase;
+  letter-spacing: 0.7em;
 }
 
 ul {
