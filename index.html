@@ -4,6 +4,19 @@
     <title>DragonDrop</title>
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/team.css">
+    <script src="https://apis.google.com/js/platform.js"></script>
+    <script>
+  function onYtEvent(payload) {
+    if (payload.eventType == 'subscribe') {
+      // Add code to handle subscribe event.
+    } else if (payload.eventType == 'unsubscribe') {
+      // Add code to handle unsubscribe event.
+    }
+    if (window.console) { // for debugging only
+      window.console.log('YT event: ', payload);
+    }
+  }
+</script>
   </head>
   <body>
     <ul>
@@ -48,13 +61,8 @@
           <!-- Thanks to Icons8.com for letting us use this icon -->
           <div style="text-align: right;"><img src="https://maxcdn.icons8.com/Color/PNG/48/Social_Networks/facebook-48.png" title="Facebook" width="48"></div>
         </div>
-        <div class="testimonial" style="text-align: left;">
-          <p style="color: black;">Some testimonial filler text</p><br>
-          <i>- SomePerson (January 2017)</i>
-          <!-- Thanks to Icons8.com for letting us use this icon -->
-          <div style="text-align: right;"><img src="https://maxcdn.icons8.com/Color/PNG/48/Media_Controls/youtube_play-48.png" title="YouTube" width="48"></div>
-        </div>
       </div>
+      <!--<div class="g-ytsubscribe" data-channelid="UCqDLkUysUEtRxed5_1Wm5YQ" data-layout="full" data-count="default" data-onytevent="onYtEvent"></div>-->
     </center>
     <hr>
     <div class="content">
@@ -74,6 +82,7 @@
             <h3>Chrome Extension</h3>
           </div>
         </div>
+        <button>Get the App</button>
       </center>
     </div>
     <hr>
