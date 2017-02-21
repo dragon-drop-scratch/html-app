@@ -3,6 +3,64 @@
   <head>
     <link rel="stylesheet" href="https://dragon-drop-scratch.github.io/html-app/assets/css/main.css">
     <link rel="stylesheet" href="https://dragon-drop-scratch.github.io/html-app/assets/css/account.css">
+    <style>
+      .fancyModal-Dialog {
+      position: fixed;
+      font-family: Arial, Helvetica, sans-serif;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 99999;
+      opacity:0;
+      -webkit-transition: opacity 400ms ease-in;
+      -moz-transition: opacity 400ms ease-in;
+      transition: opacity 400ms ease-in;
+      pointer-events: none;
+      }
+      .fancyModal-Dialog:target {
+      opacity:1;
+      pointer-events: auto;
+      }
+      .fancyModal-Dialog > div {
+      width: 400px;
+      position: relative;
+      margin: auto;
+      padding: 5px 20px 13px 20px;
+      border-radius: 10px;
+      background: #fff;
+      position: relative;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      box-shadow: 0 0 20px #c1c1c1;
+      }
+      .fancyModal-close {
+      background: #ff6d6d;
+      color: #FFFFFF;
+      line-height: 25px;
+      position: absolute;
+      right: -12px;
+      text-align: center;
+      top: -10px;
+      width: 26px;
+      text-decoration: none;
+      font-weight: bold;
+      -webkit-border-radius: 12px;
+      -moz-border-radius: 12px;
+      border-radius: 12px;
+      -moz-box-shadow: 1px 1px 3px #000;
+      -webkit-box-shadow: 1px 1px 3px #000;
+      box-shadow: 1px 1px 3px #000;
+      transition: all 0.15s ease;
+      }
+      .fancyModal-close:hover {
+      background: #ff0000;
+      border-radius: 5px;
+      }
+    </style>
   </head>
   <body>
     <ul>
@@ -19,7 +77,8 @@
           <h2 style="text-align: center;">Account information</h2>
           <hr>
           <h3>Email</h3>
-          <p style="color: gray;">example@example.com</p><br>
+          <p style="color: gray;">example@example.com</p>
+          <br>
           <a href="#change-email">Change</a>
           <hr>
           <h3>Password</h3>
@@ -34,5 +93,39 @@
         </div>
       </center>
     </div>
+    <!-- (c) 2017 AWATIM FancyModal group -->
+    <div id="open-fancyModal" class="fancyModal-Dialog">
+      <div>
+        <div id="217710_close"><a href="#" title="Close" class="fancyModal-close">&times;</a></div>
+        <h2 id="217710_title" class="fancyModal-title">Default</h2>
+        <div id="217710_content" class="fancyModal-content">
+          You are seing the <b>Default</b> values for this FancyModal widget. You can edit the current value using the 'editFancyModal' function.
+        </div>
+      </div>
+    </div>
+    <script>
+      var editFancyModal = function (title, content) {
+          /* Find the title and content elements */
+          fancyT = document.getElementById("217710_title");
+          fancyC = document.getElementById("217710_content");
+      
+          /* Edit the title and content elements */
+          fancyT.innerHTML = title;
+          fancyC.innerHTML = content;
+          
+          console.log("FancyModal Changed to '" + title + "' '" + content + "' '" + close + "'.");
+      }
+      var editFancyModalClose = function (close) {
+          fancyX = document.getElementById("217710_close");
+          fancyX.innerHTML = close;
+      }
+      var showFancyModal = function () {
+          location.replace("#open-fancyModal");
+      }
+      var hideFancyModal = function () {
+          location.replace("#");
+      }
+    </script>
+    <!-- End copyright -->
   </body>
 </html>
