@@ -1,4 +1,4 @@
-.body { 
+body { 
   background-color: #F8F8F8;
 }
 
@@ -20,6 +20,7 @@
     padding: 25px;
     border: 1px solid #D4D4D4;
     background-color: white;
+    height: initial;
     width: 80%;
     margin: 0 auto;
     margin-top: 10%;
