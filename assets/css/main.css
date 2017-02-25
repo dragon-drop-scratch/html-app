@@ -1,18 +1,18 @@
 body {
-  margin: 0px;
-  padding: 0px;
-  font-family: 'Segoe UI', Helvetica, Arial;
-  color: #4f545c;
+  	margin: 0px;
+  	padding: 0px;
+  	font-family: 'Segoe UI', Helvetica, Arial;
+  	color: #4f545c;
 }
 
 .main-content {
-  padding: 20px;
+  	padding: 20px;
 }
 
 .title {
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  text-align: center;
+  	text-transform: uppercase;
+  	letter-spacing: 0.1em;
+  	text-align: center;
 }
 
 ul {
@@ -24,6 +24,7 @@ ul {
     border-style: groove;
     border-width: 0px 0px 1px;
     border-color: #888;
+	position: fixed;
 }
 
 li {
