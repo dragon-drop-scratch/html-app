@@ -16,12 +16,6 @@
         s0.parentNode.insertBefore(s1,s0);
       })();
     </script>
-    <script>
-      $('iframe').load( function() {
-        $('iframe').contents().find("head")
-          .append($("<style type='text/css'>  a[tabindex='-1']{display:none;}  </style>"));
-      });
-    </script>
   </head>
   <body>
     <ul>
@@ -51,5 +45,11 @@
         <p>You can visit the knowledge base <a href="./kb.html">here</a></p>
       </div>
     </center>
+    <script>
+      $('iframe').load( function() {
+        $('iframe').contents().find("head")
+          .append($("<style type='text/css'>  a[tabindex='-1']{display:none;}  </style>"));
+      });
+    </script>
   </body>
 </html>
