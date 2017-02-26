@@ -4,7 +4,12 @@
   <head>
     <link rel="stylesheet" href="https://dragon-drop-scratch.github.io/html-app/assets/css/main.css">
     <title>Support - DragonDrop</title>
-    <!--Start of Tawk.to Script-->
+    <script>
+      $('iframe').load( function() {
+        $('iframe').contents().find("head")
+          .append($("<style type='text/css'>  a[tabindex='-1']{display:none;}  </style>"));
+      });
+    </script>
     <script type="text/javascript">
       var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
       (function(){
@@ -16,7 +21,6 @@
         s0.parentNode.insertBefore(s1,s0);
       })();
     </script>
-    <!--End of Tawk.to Script-->
   </head>
   <body>
     <ul>
