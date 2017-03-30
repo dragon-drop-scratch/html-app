@@ -142,3 +142,10 @@ hr {
    	-webkit-box-align: center;
     	align-items: center;
 }
+
+.footer {
+  margin: 0px;
+  margin-top: 30px;
+  padding: 20px;
+  background-color: rgb(242,242,242);
+}
