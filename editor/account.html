@@ -1,66 +1,114 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>My Account - DragonDrop</title>
     <link rel="stylesheet" href="https://dragon-drop-scratch.github.io/html-app/assets/css/main.css">
     <link rel="stylesheet" href="https://dragon-drop-scratch.github.io/html-app/assets/css/account.css">
-    <style>
-      .fancyModal-Dialog {
-      position: fixed;
-      font-family: Arial, Helvetica, sans-serif;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background: rgba(0,0,0,0.5);
-      z-index: 99999;
-      opacity:0;
-      -webkit-transition: opacity 400ms ease-in;
-      -moz-transition: opacity 400ms ease-in;
-      transition: opacity 400ms ease-in;
-      pointer-events: none;
+    <link rel="stylesheet" type="text/css" href="https://dragon-drop-scratch.github.io/prototype/dist/sweetalert.css">
+    <script async src="https://dragon-drop-scratch.github.io/prototype/dist/sweetalert.min.js"></script>
+    <script async>
+      function changeEmail() {
+        var password = "this-is-a-pass"; // Just for now. When backend is implemented, it'll be secure.
+        swal({
+          title: "Enter Password",
+          text: "Enter your current password to continue.",
+          type: "input",
+          allowOutsideClick: true,
+          showCancelButton: true,
+          animation: "slide-from-top",
+          inputType: "password",
+          inputPlaceholder: "Enter password",
+          closeOnConfirm: false
+        }, function(inputValue) {
+          if (inputValue === false) return false;
+          if (inputValue === "") {
+            swal.showInputError("Enter a password!");
+            return false
+          }
+          if (inputValue !== password) {
+            swal.showInputError("Incorrect password!");
+            return false;
+          }
+          swal({
+            title: "Change Email",
+            text: "Enter a new email for your account.",
+            type: "input",
+            allowOutsideClick: true,
+            showCancelButton: true,
+            inputPlaceholder: "johndoe@example.com",
+            showLoaderOnConfirm: true
+          }, function(inputValue) {
+            if (inputValue === false) return false;
+            if (inputValue === "") {
+              swal.showInputError("Enter an email!");
+              return false
+            }
+            setTimeout(function(){
+              // Backend for email change
+              var emailChanged = true; // If the email was successfully changed or not
+              if (emailChanged) {
+                swal("Success!", "Your email was successfully changed to " + String(inputValue), "success");
+              } else {
+                swal("Error!", "Your email was not changed. If you keep experiencing this error, please contact DragonDrop Support.", "error");
+              }
+            }, 3000);
+          });
+        });
       }
-      .fancyModal-Dialog:target {
-      opacity:1;
-      pointer-events: auto;
+       
+      function changePassword() {
+        var password = "this-is-a-pass"; // Just for now. When backend is implemented, it'll be secure.
+        swal({
+          title: "Enter Password",
+          text: "Enter your current password to continue.",
+          type: "input",
+          allowOutsideClick: true,
+          showCancelButton: true,
+          animation: "slide-from-top",
+          inputType: "password",
+          inputPlaceholder: "Enter password",
+          closeOnConfirm: false
+        }, function(inputValue) {
+          if (inputValue === false) return false;
+          if (inputValue === "") {
+            swal.showInputError("Enter a password!");
+            return false
+          }
+          if (inputValue !== password) {
+            swal.showInputError("Incorrect password!");
+            return false;
+          }
+          swal({
+            title: "Change Password",
+            text: "Enter a new password for your account.",
+            type: "input",
+            inputType: "password",
+            allowOutsideClick: true,
+            showCancelButton: true,
+            showLoaderOnConfirm: true
+          }, function(inputValue) {
+            if (inputValue === false) return false;
+            if (inputValue === "") {
+              swal.showInputError("Enter a password!");
+              return false
+            }
+            setTimeout(function(){
+              // Backend for email change
+              var passChanged = true; // If the email was successfully changed or not
+              if (passChanged) {
+                swal("Success!", "Your password was successfully changed.", "success");
+              } else {
+                swal("Error!", "Your password was not changed. If you keep experiencing this error, please contact DragonDrop Support.", "error");
+              }
+            }, 3000);
+          });
+        });
       }
-      .fancyModal-Dialog > div {
-      width: 400px;
-      position: relative;
-      margin: auto;
-      padding: 5px 20px 13px 20px;
-      border-radius: 10px;
-      background: #fff;
-      position: relative;
-      top: 50%;
-      -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
-      box-shadow: 0 0 20px #c1c1c1;
+      function connectAccount() {
+        // Not implemented
+        swal("Error!", "This function hasn't been implemented yet.", "error");
       }
-      .fancyModal-close {
-      background: #ff6d6d;
-      color: #FFFFFF;
-      line-height: 25px;
-      position: absolute;
-      right: -12px;
-      text-align: center;
-      top: -10px;
-      width: 26px;
-      text-decoration: none;
-      font-weight: bold;
-      -webkit-border-radius: 12px;
-      -moz-border-radius: 12px;
-      border-radius: 12px;
-      -moz-box-shadow: 1px 1px 3px #000;
-      -webkit-box-shadow: 1px 1px 3px #000;
-      box-shadow: 1px 1px 3px #000;
-      transition: all 0.15s ease;
-      }
-      .fancyModal-close:hover {
-      background: #ff0000;
-      border-radius: 5px;
-      }
-    </style>
+    </script>
   </head>
   <body>
     <ul>
@@ -79,13 +127,13 @@
           <h3>Email</h3>
           <p style="color: gray;">example@example.com</p>
           <br>
-          <a href="#change-email">Change</a>
+          <a onClick="changeEmail()">Change</a>
           <hr>
           <h3>Password</h3>
-          <a href="#change-password">Change password</a> | <a href="#connect-account">Connect accounts</a>
+          <a onClick="changePassword()">Change password</a> | <a onClick="connectAccount()">Connect accounts</a>
           <hr>
           <h3>Profile</h3>
-          <form action="">
+          <form action="social_preferences.php">
             <input type="checkbox" value="showprofile">Show my profile<br>
             <input type="checkbox" value="showsites">Show my sites<br>
             <input type="submit" value="Update Settings">
@@ -93,39 +141,5 @@
         </div>
       </center>
     </div>
-    <!-- (c) 2017 AWATIM FancyModal group -->
-    <div id="open-fancyModal" class="fancyModal-Dialog">
-      <div>
-        <div id="217710_close"><a href="#" title="Close" class="fancyModal-close">&times;</a></div>
-        <h2 id="217710_title" class="fancyModal-title">Default</h2>
-        <div id="217710_content" class="fancyModal-content">
-          You are seing the <b>Default</b> values for this FancyModal widget. You can edit the current value using the 'editFancyModal' function.
-        </div>
-      </div>
-    </div>
-    <script>
-      var editFancyModal = function (title, content) {
-          /* Find the title and content elements */
-          fancyT = document.getElementById("217710_title");
-          fancyC = document.getElementById("217710_content");
-      
-          /* Edit the title and content elements */
-          fancyT.innerHTML = title;
-          fancyC.innerHTML = content;
-          
-          console.log("FancyModal Changed to '" + title + "' '" + content + "' '" + close + "'.");
-      }
-      var editFancyModalClose = function (close) {
-          fancyX = document.getElementById("217710_close");
-          fancyX.innerHTML = close;
-      }
-      var showFancyModal = function () {
-          location.replace("#open-fancyModal");
-      }
-      var hideFancyModal = function () {
-          location.replace("#");
-      }
-    </script>
-    <!-- End copyright -->
   </body>
 </html>
