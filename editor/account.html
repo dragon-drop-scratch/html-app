@@ -68,7 +68,7 @@
           animation: "slide-from-top",
           inputType: "password",
           inputPlaceholder: "Enter password",
-          closeOnConfirm: false
+          closeOnConfirm: false,
         }, function(inputValue) {
           if (inputValue === false) return false;
           if (inputValue === "") {
@@ -86,7 +86,8 @@
             inputType: "password",
             allowOutsideClick: true,
             showCancelButton: true,
-            showLoaderOnConfirm: true
+            showLoaderOnConfirm: true,
+            closeOnConfirm: false
           }, function(inputValue) {
             if (inputValue === false) return false;
             if (inputValue === "") {
