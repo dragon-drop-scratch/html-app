@@ -36,12 +36,13 @@
             allowOutsideClick: true,
             showCancelButton: true,
             inputPlaceholder: "johndoe@example.com",
-            showLoaderOnConfirm: true
+            showLoaderOnConfirm: true,
+            closeOnConfirm: false
           }, function(inputValue) {
             if (inputValue === false) return false;
             if (inputValue === "") {
               swal.showInputError("Enter an email!");
-              return false
+              return false;
             }
             setTimeout(function(){
               // Backend for email change
